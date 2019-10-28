@@ -7,7 +7,7 @@ ENV PHPIPAM_AGENT_SOURCE https://github.com/phpipam/phpipam-agent
 RUN sed -i /etc/apt/sources.list -e 's/$/ non-free'/ && \
     apt-get update && apt-get -y upgrade && \
     rm /etc/apt/preferences.d/no-debian-php && \
-    apt-get install -y git cron libgmp-dev iputils-ping fping && \
+    apt-get install -y git cron libgmp-dev iputils-ping fping cron nano && \
     rm -rf /var/lib/apt/lists/*
 
 # Configure apache and required PHP modules
